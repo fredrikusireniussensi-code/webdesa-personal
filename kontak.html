@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Desa bea kakor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="jam-digital">
+  <span id="jam"></span> :
+  <span id="menit"></span> :
+  <span id="detik"></span>
+</div>
+
+    <header>
+        <h1>Kontak Kami</h1>
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Desa</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="pemerintah.html">pemerintah</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Alamat</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.2135965853527!2d120.40738127359518!3d-8.
+        575450287011254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db377004f6b7221%3A0x6fa8feb5f7a04afe!
+        2sWaekang!5e0!3m2!1sid!2sid!4v1754094222966!5m2!1sid!2sid" width="600" height="450" 
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Jl. Liang Bua, WaeKang,desa bea Kakor, Kabupaten Manggarai, Nusa Tenggara Timur</p>
+<mark>
+        <h2>Email & Telepon</h2>
+        <p>Email: desabeakakor@email.com</p>
+        <p>Telepon: 0821-2482-1881</p>
+</mark>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pemerintah Desa bea kakor </p>
+    </footer>
+    <script>
+function updateJam() {
+    const waktu = new Date();
+    const jam = String(waktu.getHours()).padStart(2, '0');
+    const menit = String(waktu.getMinutes()).padStart(2, '0');
+    const detik = String(waktu.getSeconds()).padStart(2, '0');
+
+    document.getElementById("jam").textContent = jam;
+    document.getElementById("menit").textContent = menit;
+    document.getElementById("detik").textContent = detik;
+}
+
+setInterval(updateJam, 1000);
+updateJam(); // Panggil sekali saat halaman dimuat
+</script>
+
+</body>
+</html>

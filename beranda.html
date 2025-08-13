@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Bea kakor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="jam-digital">
+  <span id="jam"></span> :
+  <span id="menit"></span> :
+  <span id="detik"></span>
+</div>
+
+    <header>
+        <h1>Selamat Datang di Desa Bea Kakor</h1>
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Desa</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="pemerintah.html">pemerintah</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tentang">
+            <h2>Tentang Desa</h2>
+            <p>Desa Wae, Kang adalah desa yang indah terletak di perbukitan dengan udara sejuk dan masyarakat yang ramah.</p>
+            <img src="desa.jpg" alt="Pemandangan Desa Wae, Kang" width="300">
+        </section>
+
+        <section class="berita">
+            <h2>Berita Terbaru</h2>
+            <ul>
+                <mark>
+                <li>⚠️ Pembangunan jalan desa dimulai minggu depan.</li>
+                <li>🌾 Pelatihan pertanian organik akan diadakan tanggal 10 Agustus.</li>
+                <li>🏫 Posyandu akan dibuka kembali setelah renovasi.</li>
+                </mark>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>frederikus irenus sensi</p>
+    </footer>
+    <script>
+function updateJam() {
+    const waktu = new Date();
+    const jam = String(waktu.getHours()).padStart(2, '0');
+    const menit = String(waktu.getMinutes()).padStart(2, '0');
+    const detik = String(waktu.getSeconds()).padStart(2, '0');
+
+    document.getElementById("jam").textContent = jam;
+    document.getElementById("menit").textContent = menit;
+    document.getElementById("detik").textContent = detik;
+}
+
+setInterval(updateJam, 1000);
+updateJam(); // Panggil sekali saat halaman dimuat
+</script>
+</body>
+</html>
+

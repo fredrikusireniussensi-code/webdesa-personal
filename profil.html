@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Desa bea kakor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="jam-digital">
+  <span id="jam"></span> :
+  <span id="menit"></span> :
+  <span id="detik"></span>
+</div>
+    <header>
+        <h1>Profil Desa</h1>
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Desa</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="pemerintah.html">pemerintah</a></li> 
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+<mark>
+    <main>
+        <h2>Sejarah dan Data Umum</h2>
+        <p>Desa bea kakor  berdiri sejak tahun 1900 dan terletak di daerah perbukitan. Mata pencaharian utama masyarakat adalah pertanian dan peternakan.</p>
+
+        <h2>Visi dan Misi</h2>
+        <p><strong>Visi:</strong> Menjadi desa yang mandiri, sejahtera, dan berkelanjutan.</p>
+        <p><strong>Misi:</strong> Meningkatkan pelayanan publik, kualitas SDM, dan potensi lokal.</p>
+    </main>
+    </mark>
+<iframe width="640" height="360"
+    src="https://youtube/HTCtNU-Rl6Y?si=Vfq2Qpp1pVxRnqeX"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+    <footer>
+        <p>&copy; 2025 Pemerintah Desa bea kakor</p>
+    </footer>
+    <script>
+function updateJam() {
+    const waktu = new Date();
+    const jam = String(waktu.getHours()).padStart(2, '0');
+    const menit = String(waktu.getMinutes()).padStart(2, '0');
+    const detik = String(waktu.getSeconds()).padStart(2, '0');
+
+    document.getElementById("jam").textContent = jam;
+    document.getElementById("menit").textContent = menit;
+    document.getElementById("detik").textContent = detik;
+}
+
+setInterval(updateJam, 1000);
+updateJam(); // Panggil sekali saat halaman dimuat
+</script>
+
+</body>
+</html>

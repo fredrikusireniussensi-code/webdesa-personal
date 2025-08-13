@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Desa bea kakor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="jam-digital">
+  <span id="jam"></span> :
+  <span id="menit"></span> :
+  <span id="detik"></span>
+</div>
+    <header>
+        <h1>Berita Terbaru</h1>
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Desa</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="pemerintah.html">pemerintah</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul>
+            <li>📅 1 Agustus 2025: Jalan desa mulai diperbaiki sepanjang 2 km.</li>
+            <li>📢 5 Agustus 2025: Pelatihan UMKM untuk warga akan diadakan di balai desa.</li>
+            <li>🎉 17 Agustus 2025: Lomba Hari Kemerdekaan di lapangan desa.</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pemerintah Desa WaeKang</p>
+    </footer>
+    <script>
+function updateJam() {
+    const waktu = new Date();
+    const jam = String(waktu.getHours()).padStart(2, '0');
+    const menit = String(waktu.getMinutes()).padStart(2, '0');
+    const detik = String(waktu.getSeconds()).padStart(2, '0');
+
+    document.getElementById("jam").textContent = jam;
+    document.getElementById("menit").textContent = menit;
+    document.getElementById("detik").textContent = detik;
+}
+
+setInterval(updateJam, 1000);
+updateJam(); // Panggil sekali saat halaman dimuat
+</script>
+</body>
+</html>
